@@ -1,0 +1,27 @@
+@import "../setup/variables";
+@import "../setup/typography";
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: NanumGothic-Regular, Helvetica Neue, sans-serif;
+}
+
+#root {
+  height: 100%;
+}
+.app__wrapper {
+  height: 100%;
+  flex: 1;
+}
+
+.chat-app {
+  height: 100%;
+  box-shadow: rgba(0, 0, 0, 0.33) 0px 1px 4px 0px;
+}

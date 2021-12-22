@@ -1,0 +1,52 @@
+.bg {
+    background-image: url(../../imgs/tile_background.png);
+    height: 100%;
+}
+.landing-page-wrapper {
+    align-items: center;
+    h1 {
+        font-size: 60px;
+        font-family: astral_sisters;
+        font-weight: initial;
+        text-align: center;
+        animation-duration: 3s;
+        animation-name: slideinLeft;
+    }
+    button {
+        padding: 15px;
+    }
+    a {
+        text-decoration: unset;
+    }
+}
+
+footer {
+    position: fixed;
+    font-size: 12px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 50px;
+    text-align: center;
+    color: #fff;
+    background-color: #161332;
+}
+
+@keyframes slideinLeft {
+    from {
+        margin-left: 100%;
+        width: 300%;
+    }
+
+    75% {
+        font-size: 300%;
+        margin-left: 25%;
+        width: 150%;
+    }
+
+    to {
+        margin-left: 0%;
+        width: 100%;
+    }
+}
+

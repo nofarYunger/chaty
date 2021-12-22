@@ -1,0 +1,122 @@
+.team-channel-header-container {
+    position: relative;
+    height: 62px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    background: #ffffff;
+    box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.1);
+    border-top-right-radius: 16px;
+    z-index: 1;
+}
+
+.channel-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.channel-wrapper svg {
+    cursor: pointer;
+}
+
+.name {
+    font-weight: bold;
+    font-size: 18px;
+    color: #2c2c30;
+    margin-right: 8px;
+}
+
+.name-wrapper {
+    flex: 3;
+    display: flex;
+    align-items: center;
+    overflow-x: auto;
+    max-width: 500px;
+    white-space: nowrap;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+@media screen and (min-width: 1070px) {
+    .name-wrapper {
+        max-width: 700px;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+
+        .str-chat__avatar {
+            margin-right: 8px;
+        }
+    }
+
+    .name-multi {
+        display: flex;
+        align-items: center;
+        margin-right: 8px;
+        &:nth-child(3) {
+            margin-right: 0px;
+        }
+    }
+
+    .name.user {
+        font-weight: 500;
+        font-size: 14px;
+    }
+
+    .right {
+        flex: 0.55;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        text-align: right;
+        svg {
+            margin-left: 16px;
+            margin-right: 4px;
+        }
+    }
+
+    .right-pin-wrapper {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    .right-text {
+        font-size: 14px;
+        color: #858688;
+    }
+
+    .menu-icon {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .team-channel-header-container {
+        height: 70px;
+    }
+
+    .name-wrapper {
+        height: 100%;
+        max-width: unset;
+    }
+
+    .name-multi {
+        margin-right: 8px;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .name.user {
+        font-size: 10px;
+        margin: 5px;
+        text-align: center;
+    }
+
+    .right {
+        display: flex;
+        padding-left: 10px;
+    }
+}

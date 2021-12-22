@@ -1,0 +1,151 @@
+.form-container {
+    .fields {
+        min-height: 100vh;
+        background: $primary-color;
+        background-image: url(../../imgs/tile_background.png);
+        // background-image: url(../../imgs/tile_background-darkmode.png);
+    }
+
+    .content {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        max-width: 700px;
+        width: 80%;
+        padding: 2rem;
+        box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
+        border-radius: 4px;
+        transition: 0.8s ease;
+        background: #fff;
+
+        h1 {
+            font-size: 1.5rem;
+            color: darken(#4891f0, 20%);
+            font-weight: 900;
+        }
+        .upload-link {
+            color: var(--primary-color);
+            cursor: pointer;
+            font-weight: bold;
+            transition: color 0.5s;
+
+            &:hover {
+                color: darken(#4891f0, 20%);
+            }
+        }
+
+        .input {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            margin: 1rem 0rem;
+
+            label {
+                margin-bottom: 0.45rem;
+                color: rgb(61, 79, 88);
+                font-size: 12px;
+
+                letter-spacing: 0.7px;
+                line-height: 1.3;
+            }
+
+            input {
+                padding: 0.55rem 0.4rem;
+                border: 1px solid rgb(172, 184, 168);
+                border-radius: 3px;
+                font-size: 14px;
+                outline: none;
+                transition: all 150ms ease-in-out 0s;
+                width: 90%;
+                background: #fff;
+                &::placeholder {
+                    color: #b1b1b1;
+                    width: 100%;
+                    font-weight: unset;
+                }
+
+                &:hover {
+                    border-color: #dcdddd;
+                }
+                &:focus,
+                &:active {
+                    box-shadow: 0px 0px 0px 1.5px $primary-color;
+                    border-color: $primary-color;
+                }
+            }
+        }
+    }
+}
+.input-password {
+    position: absolute;
+    right: 13%;
+    top: 50%;
+    cursor: pointer;
+}
+
+.main-btn {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: flex-start;
+
+    button {
+        border-radius: 3px;
+        background: $primary-color;
+        border: none;
+        outline: none;
+        color: #fff;
+        font-weight: 500;
+        padding: 0.7rem 1.2rem;
+        outline: none;
+        cursor: pointer;
+        transition: 0.3s ease;
+
+        &:hover {
+            background: lighten($primary-color, 10%);
+        }
+    }
+}
+
+.account {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    margin-top: 0.2rem;
+
+    p {
+        font-size: 14px;
+        color: #000;
+        font-weight: 500;
+    }
+
+    span {
+        color: var(--primary-color);
+        cursor: pointer;
+        font-weight: 700;
+        transition: color 0.5s;
+
+        &:hover {
+            color: darken(#4891f0, 20%);
+        }
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .form-container {
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .fields {
+        padding: 2rem 0.5rem;
+    }
+
+    input {
+        width: 95%;
+    }
+
+    .input-password {
+        right: 3%;
+    }
+}
